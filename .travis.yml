@@ -13,9 +13,9 @@ after_success:
   - docker build -t mchoi3000/multi-nginx ./nginx
   - docker build -t mchoi3000/multi-server ./server
   - docker build -t mchoi3000/multi-worker ./worker
-  # log in to the docker CLI
+  # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # take those images and push them to docker hub
+  # Take those images and push them to docker hub
   - docker push -t mchoi3000/multi-client
   - docker push -t mchoi3000/multi-nginx
   - docker push -t mchoi3000/multi-server
